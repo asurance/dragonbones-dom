@@ -2,7 +2,11 @@ import dragonBones from '../dragonbones/dragonBones'
 import { EventEmitter } from '../utils/EventEmitter'
 
 export class DomArmatureProxy implements dragonBones.IArmatureProxy {
-    root: HTMLDivElement = document.createElement('div')
+    root: HTMLDivElement
+    constructor() {
+        this.root = document.createElement('div')
+        this.root.style.position = 'relative'
+    }
     private _armature: dragonBones.Armature | null = null
     private _eventEmitter = new EventEmitter()
     dbInit(armature: dragonBones.Armature): void {

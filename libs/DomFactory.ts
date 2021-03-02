@@ -27,7 +27,9 @@ export class DomFactory extends dragonBones.BaseFactory {
     }
     protected _buildSlot(dataPackage: dragonBones.BuildArmaturePackage, slotData: dragonBones.SlotData, armature: dragonBones.Armature): DomSlot {
         const slot = dragonBones.BaseObject.borrowObject(DomSlot)
-        slot.init(slotData, armature, document.createElement('div'), null)
+        const display = document.createElement('div')
+        display.style.position = 'absolute'
+        slot.init(slotData, armature, display, null)
         return slot
     }
 

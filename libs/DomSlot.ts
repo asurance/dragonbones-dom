@@ -33,7 +33,7 @@ export class DomSlot extends dragonBones.Slot {
         root.removeChild(this.divElement)
     }
     protected _updateZOrder(): void {
-        this.divElement.style.zIndex = `${this._zIndex}`
+        this.divElement.style.zIndex = `${this._zOrder}`
     }
     _updateVisible(): void {
         const visible = this._parent.visible && this._visible
@@ -62,7 +62,13 @@ export class DomSlot extends dragonBones.Slot {
     }
     protected _updateTransform(): void {
         const matrix = this.globalTransformMatrix
-        this.divElement.style.transform = `matrix(${matrix.a},${matrix.b},${matrix.c},${matrix.d},${matrix.tx},${matrix.ty})`
+        const a = matrix.a
+        const b = matrix.b
+        const c = matrix.c
+        const d = matrix.d
+        const tx = matrix.tx - this._pivotX
+        const ty = matrix.ty - this._pivotY
+        this.divElement.style.transform = `matrix(${a},${b},${c},${d},${tx},${ty})`
     }
     protected _identityTransform(): void {
         this.divElement.style.transform = 'matrix(1,0,0,1,0,0)'
