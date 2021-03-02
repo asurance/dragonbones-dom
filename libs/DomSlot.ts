@@ -2,7 +2,7 @@ import dragonBones from '../dragonbones/dragonBones'
 import { DomTextureData } from './DomTextureData'
 
 export class DomSlot extends dragonBones.Slot {
-    
+
     static toString() {
         return '[class DomSlot]'
     }
@@ -47,8 +47,7 @@ export class DomSlot extends dragonBones.Slot {
 
     protected _updateBlendMode(): void {
         if (this._blendMode !== 0) {
-            // TODO background-blend-mode
-            throw new Error('BlendMode not implemented.')
+            throw new Error('dragonbones-dom do not support blend mode except normal')
         }
     }
 
@@ -68,7 +67,7 @@ export class DomSlot extends dragonBones.Slot {
     }
 
     protected _updateMesh(): void {
-        throw new Error('Mesh not implemented.')
+        throw new Error('dragonbones-dom do not support mesh!')
     }
 
     protected _updateTransform(): void {
