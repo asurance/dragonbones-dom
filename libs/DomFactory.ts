@@ -19,12 +19,14 @@ export class DomFactory extends dragonBones.BaseFactory {
         }
         return textureAtlasData
     }
+
     protected _buildArmature(dataPackage: dragonBones.BuildArmaturePackage): dragonBones.Armature {
         const armature = dragonBones.BaseObject.borrowObject(dragonBones.Armature)
         const domArmatureProxy = new DomArmatureProxy()
         armature.init(dataPackage.armature, domArmatureProxy, domArmatureProxy.root, this._dragonBones)
         return armature
     }
+    
     protected _buildSlot(dataPackage: dragonBones.BuildArmaturePackage, slotData: dragonBones.SlotData, armature: dragonBones.Armature): DomSlot {
         const slot = dragonBones.BaseObject.borrowObject(DomSlot)
         const display = document.createElement('div')
