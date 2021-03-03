@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "emitDeclarationOnly": true,
+      "outDir": "dist",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "declaration": true,
+      "isolatedModules": true
+    },
+    "include": [
+      "libs"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

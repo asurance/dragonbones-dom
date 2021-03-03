@@ -1,9 +1,12 @@
 {
   "name": "dragonbones-dom",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "build:dragonbones":"cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
+    "build:dragonbones": "cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
+    "build:js": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts",
+    "build:d.ts": "tsc -p declaration.json",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -16,11 +19,17 @@
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
+    "@types/webpack": "^4.41.26",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
+    "cross-env": "^7.0.3",
     "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "typescript": "^4.2.2"
+    "ts-loader": "^8.0.17",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
   }
 }
