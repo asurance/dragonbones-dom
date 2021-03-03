@@ -46,13 +46,10 @@ export class DomSlot extends dragonBones.Slot {
     }
 
     protected _updateBlendMode(): void {
-        if (this._blendMode !== 0) {
-            throw new Error('dragonbones-dom do not support blend mode except normal')
-        }
+        // nothing
     }
 
     protected _updateColor(): void {
-        // TODO color
         const alpha = this._colorTransform.alphaMultiplier * this._globalAlpha
         this.divElement.style.opacity = `${alpha}`
     }
@@ -67,7 +64,7 @@ export class DomSlot extends dragonBones.Slot {
     }
 
     protected _updateMesh(): void {
-        throw new Error('dragonbones-dom do not support mesh!')
+        // nothing
     }
 
     protected _updateTransform(): void {
