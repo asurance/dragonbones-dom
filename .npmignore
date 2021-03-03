@@ -1,0 +1,13 @@
+dragonbones
+DragonBonesJS
+libs
+node_modules
+utils
+webpack
+.eslintignore
+.eslintrc.yml
+.gitignore
+.gitmodules
+declaration.json
+tsconfig.json
+yarn.lock
