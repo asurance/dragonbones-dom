@@ -7,18 +7,9 @@
     "build:dragonbones": "cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
     "build:js": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts",
     "build:d.ts": "tsc -p declaration.json",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
     "@types/webpack": "^4.41.26",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
