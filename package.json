@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:dragonbones":"cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
