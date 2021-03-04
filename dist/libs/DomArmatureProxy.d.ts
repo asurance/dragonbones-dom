@@ -1,4 +1,4 @@
-import dragonBones from '../dragonBones'
+import { dragonBones } from '.'
 export declare class DomArmatureProxy implements dragonBones.IArmatureProxy {
     root: HTMLDivElement;
     private _armature;

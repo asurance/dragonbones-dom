@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": {
-      "name": "asurance",
-      "email": "784672616@qq.com"
+    "name": "asurance",
+    "email": "784672616@qq.com"
   },
-  "types": "index.d.ts",
+  "types": "dist/libs/index.d.ts",
   "scripts": {
     "build:dragonbones": "cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
     "build:js": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts",
@@ -30,14 +30,14 @@
   "homepage": "https://github.com/asurance/dragonbones-dom",
   "description": "render dragonbones with div element",
   "repository": {
-      "type":"git",
-      "url": "https://github.com/asurance/dragonbones-dom.git"
+    "type": "git",
+    "url": "https://github.com/asurance/dragonbones-dom.git"
   },
   "keywords": [
-      "dragonbones"
+    "dragonbones"
   ],
   "bugs": {
-      "url": "https://github.com/asurance/dragonbones-dom/issues"
+    "url": "https://github.com/asurance/dragonbones-dom/issues"
   },
   "license": "MIT"
 }

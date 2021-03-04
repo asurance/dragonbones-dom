@@ -1,4 +1,4 @@
-import dragonBones from '../dragonBones'
+import { dragonBones } from '.'
 import { DomSlot } from './DomSlot'
 import { DomTextureAtlasData } from './DomTextureAtlasData'
 export declare class DomFactory extends dragonBones.BaseFactory {

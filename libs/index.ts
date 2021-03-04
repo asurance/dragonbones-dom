@@ -1,4 +1,5 @@
-import dragonBones from '../dragonbones/dragonBones'
+import db from '../dragonbones/dragonBones'
 
 export { DomFactory } from './DomFactory'
-export const WorldClock = dragonBones.WorldClock
+
+export const dragonBones = db

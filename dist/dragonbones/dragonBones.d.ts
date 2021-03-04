@@ -374,7 +374,7 @@ declare namespace dragonBones {
          * @language zh_CN
          */
         static borrowObject<T extends BaseObject>(objectConstructor: {
-            new (): T;
+            new(): T;
         }): T;
         /**
          * - A unique identification number assigned to the object.
@@ -6235,4 +6235,3 @@ declare namespace dragonBones {
         skin: SkinData | null;
     }
 }
-export default dragonBones

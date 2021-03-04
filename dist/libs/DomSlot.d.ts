@@ -1,4 +1,4 @@
-import dragonBones from '../dragonbones'
+import { dragonBones } from '.'
 export declare class DomSlot extends dragonBones.Slot {
     static toString(): string;
     private divElement;

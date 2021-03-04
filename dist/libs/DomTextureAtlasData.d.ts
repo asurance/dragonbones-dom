@@ -1,4 +1,4 @@
-import dragonBones from '../dragonbones'
+import { dragonBones } from '.'
 import { DomTextureData } from './DomTextureData'
 export declare class DomTextureAtlasData extends dragonBones.TextureAtlasData {
     static toString(): string;
