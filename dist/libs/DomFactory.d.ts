@@ -2,6 +2,7 @@ import { dragonBones } from '.'
 import { DomSlot } from './DomSlot'
 import { DomTextureAtlasData } from './DomTextureAtlasData'
 export declare class DomFactory extends dragonBones.BaseFactory {
+    constructor(dragonbones: dragonBones.DragonBones, dataParser?: dragonBones.DataParser | null)
     protected _isSupportMesh(): boolean;
     protected _buildTextureAtlasData(textureAtlasData: DomTextureAtlasData | null, textureAtlas: string): DomTextureAtlasData;
     protected _buildArmature(dataPackage: dragonBones.BuildArmaturePackage): dragonBones.Armature;

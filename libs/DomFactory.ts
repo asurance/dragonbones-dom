@@ -5,6 +5,11 @@ import { DomTextureAtlasData } from './DomTextureAtlasData'
 
 export class DomFactory extends dragonBones.BaseFactory {
 
+    constructor(dragonbones: dragonBones.DragonBones, dataParser: dragonBones.DataParser | null = null) {
+        super(dataParser)
+        this._dragonBones = dragonbones
+    }
+
     protected _isSupportMesh() {
         return false
     }
