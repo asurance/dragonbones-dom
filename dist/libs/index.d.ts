@@ -1,5 +1,5 @@
 export { DomFactory } from './DomFactory'
-export function CreateEventManager(): dragonBones.IEventDispatcher
+export declare function CreateEventManager(): dragonBones.IEventDispatcher;
 /**
  * The MIT License (MIT)
  *

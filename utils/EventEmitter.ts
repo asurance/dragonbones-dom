@@ -1,3 +1,5 @@
+import dragonBones from '../dragonbones/dragonBones'
+
 type Callback = {
     fn: Function
     context: any
@@ -5,7 +7,7 @@ type Callback = {
 
 export class EventEmitter {
     private callbacks: { [key: string]: Callback | Callback[] } = {}
-    on(type: string, callbackFn: Function, callbackContext: any) {
+    addDBEventListener(type: string, callbackFn: Function, callbackContext: any) {
         const newCallback: Callback = {
             fn: callbackFn,
             context: callbackContext,
@@ -24,7 +26,7 @@ export class EventEmitter {
             this.callbacks[type] = newCallback
         }
     }
-    off(type: string, callbackFn: Function, callbackContext: any) {
+    removeDBEventListener(type: string, callbackFn: Function, callbackContext: any) {
         if (type in this.callbacks) {
             const callbacks = this.callbacks[type]
             if (Array.isArray(callbacks)) {
@@ -50,10 +52,10 @@ export class EventEmitter {
             }
         }
     }
-    has(type: string) {
+    hasDBEventListener(type: string) {
         return type in this.callbacks
     }
-    emit(type: string, data: any) {
+    dispatchDBEvent(type: string, data: dragonBones.EventObject) {
         if (type in this.callbacks) {
             const callbacks = this.callbacks[type]
             if (Array.isArray(callbacks)) {

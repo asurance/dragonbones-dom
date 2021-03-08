@@ -1,7 +1,8 @@
+import { dragonBones } from '../libs'
 export declare class EventEmitter {
     private callbacks;
-    on(type: string, callbackFn: Function, callbackContext: any): void;
-    off(type: string, callbackFn: Function, callbackContext: any): void;
-    has(type: string): boolean;
-    emit(type: string, data: any): void;
+    addDBEventListener(type: string, callbackFn: Function, callbackContext: any): void;
+    removeDBEventListener(type: string, callbackFn: Function, callbackContext: any): void;
+    hasDBEventListener(type: string): boolean;
+    dispatchDBEvent(type: string, data: dragonBones.EventObject): void;
 }
