@@ -11,7 +11,7 @@
 
 ## 示例
 ```typescript
-const factory = new DomFactory()
+const factory = new DomFactory(new dragonBones.DragonBones(CreateEventManager()))
 factory.parseDragonBonesData(SkeleteonJson)
 factory.parseTextureAtlasData(TextureJson, 'texture.png')
 const armature = factory.buildArmature('Dragon')!
