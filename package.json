@@ -10,6 +10,7 @@
   "scripts": {
     "build:dragonbones": "cd DragonBonesJS/DragonBones/ && yarn build-dom && cd ../../ && echo \"export default dragonBones\" >> dragonbones/dragonBones.d.ts",
     "build:js": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts",
+    "build:js:dev": "yarn build:js --mode=development --devtool=\"source-map\"",
     "build:d.ts": "tsc -p declaration.json"
   },
   "devDependencies": {
