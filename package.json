@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/asurance/dragonbones-dom/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+      "dist"
+  ]
 }
