@@ -55,12 +55,19 @@ export class DomSlot extends dragonBones.Slot {
     }
 
     protected _updateFrame(): void {
-        const textureData = this._textureData as DomTextureData
-        this.divElement.style.backgroundImage = `url(${textureData.atlas.url})`
-        const region = textureData.region
-        this.divElement.style.width = `${region.width}px`
-        this.divElement.style.height = `${region.height}px`
-        this.divElement.style.backgroundPosition = `${-region.x}px ${-region.y}px`
+        const textureData = this._textureData as DomTextureData | null
+        if (textureData) {
+            this.divElement.style.backgroundImage = `url(${textureData.atlas.url})`
+            const region = textureData.region
+            this.divElement.style.width = `${region.width}px`
+            this.divElement.style.height = `${region.height}px`
+            this.divElement.style.backgroundPosition = `${-region.x}px ${-region.y}px`
+        } else {
+            this.divElement.style.backgroundImage = ''
+            this.divElement.style.width = ''
+            this.divElement.style.height = ''
+            this.divElement.style.backgroundPosition = ''
+        }
     }
 
     protected _updateMesh(): void {

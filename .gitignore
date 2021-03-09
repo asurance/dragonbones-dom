@@ -36,3 +36,4 @@ yarn-error.log*
 dragonbones
 index.js
 !dist/dragonbones
+index.js.map
